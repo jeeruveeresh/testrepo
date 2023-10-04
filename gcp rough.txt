@@ -1,0 +1,46 @@
+create or replace table 
+myds.mynewtbl(transcationid INT64.transaction_date DATE)
+PARTITION BY
+transaction_date
+AS
+(select transactionid,transcation_date
+FROM 
+myds.myoldtbl
+)
+
+cloud functions:
+
+serverless execution envirnonment for building and connecting cloud services.
+by CF we write simple functions that are attached to events emitted from other services like cloud storage,bigquery,pub/sub.
+we can write functions in various lang like java,python,node js,go etc.
+offered in 2 versions-1st gen and 2nd gen.
+we can automate so many task using cloud functions 
+1.data processing/ETL ---respond to GCS file events, pubsub messages(data published to pubsub topic).
+we can write a logic/code in rsponse to data processing in storage buckets,data published to pubsub topic
+2.webhooks - respond to HTTP triggers,third party apps like github,slack... etc
+
+finally after deploying ur function
+
+
+
+API:
+application programming interface,makes software development process easy by permitting seamless and secure dtaa transfer between two apps
+
+	examples:login with using facebook
+	while using some websites , we see login with using facebook account it means that website uses the facebook api to integrate its services and skip sing up process
+
+
+apchi beam - 
+is a set of open source SDK's,that developers use to interact with the data flow models. 
+
+Apache Beam is an open source, unified model for defining both batch and streaming data-parallel processing pipelines.
+Using one of the open source Beam SDKs, you build a program that defines the pipeline.
+The pipeline is then executed by one of Beam’s supported distributed processing back-ends, which include Apache Flink, Apache Spark, and Google Cloud Dataflow.
+
+
+
+allows folks to compose highly expressive batch and streaming pipelines with the lang of their choices and to run those pipleines on a number of diff runners.
+
+suppoerted langs include java,python,SQL,go and we can also choose runners,where ur pipelines will actually be executed.
+
+
