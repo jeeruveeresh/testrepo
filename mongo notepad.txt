@@ -1,0 +1,34 @@
+selecting fields 
+db.leads.find() - all documents are returned 
+db.leads.find() - all documents returned 
+
+db.leads.find({},{"city":1}) - get city key from all documents in the collections
+	click/delete/remove/edit -> unique value that valye is _id
+
+db.leads.find({},{"city":1, "_id":0}) 
+db.leads.find({"Tax":{$lte:300}},{"leadname":1,"Tax":1,"_id":0}) return 3 documents
+
+----PROJECTION----
+
+another name for selecting fields or showing or hiding 
+--by default it will bring up all keys values from all documets in collections
+	--drill it down 
+		db.leads.find(({"Tax":"30"})
+-number of documents will reduce 
+	-60 keys 
+	-we do not need 60 keys 
+	-we need only few keys 
+=> SELECT * from -tablw- - sql/rdbms 
+=> find() - all documemnts 
+=> find({},{"tax":1, "_id":0,"leadname":1})
+	-> mongoDb - get all documents 
+	-> matchimng documents 
+	-> extract the keys that we have asked for 
+		->this result set is returned/projected as output77]7]
+		
+
+
+
+
+
+
